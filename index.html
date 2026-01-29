@@ -1,0 +1,761 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Skill Development Platform</title>
+    <link rel="stylesheet" href="./index.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <div class="nav-container">
+        <div class="logo">NK Skilledge</div>
+
+        <nav class="nav" id="nav">
+          <a href="#Home">Home</a>
+          <a href="#About">About</a>
+          <a href="#CEO">Our CEO</a>
+          <a href="#Director">Director</a>
+          <a href="#Services">Our Services</a>
+          <a href="#Training">Training Programs</a>
+          <a href="#Projects">Clients & Projects</a>
+          <a href="#Team">Our Team</a>
+          <a href="#Contact">Contact</a>
+        </nav>
+
+        <div class="menu" onclick="toggleNav()">☰</div>
+      </div>
+    </header>
+
+    <section id="About" class="hero">
+      <div class="hero-content">
+        <h1>Shaping Skills, Building Futures</h1>
+        <p>
+          Empowering students through practical training, industry exposure, and
+          real-world learning. A youth-driven initiative bridging the gap
+          between education and employability.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#Services" class="btn primary">Our Services</a>
+          <a href="#Training" class="btn secondary">Training Programs</a>
+          <a href="#Schedule" class="btn success">Schedule a Call</a>
+          <a href="#Register" class="btn outline">Register Now</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="ai-chat">
+      <input type="checkbox" id="ai-toggle" />
+      <label for="ai-toggle" class="ai-button">AI Chat</label>
+
+      <div class="ai-popup">
+        <div class="ai-header">AI Assistant</div>
+        <div class="ai-body">
+          <p>Hello 👋</p>
+          <p>I’m your smart assistant.</p>
+          <p>Tap below to chat instantly on WhatsApp.</p>
+        </div>
+        <a href="https://wa.me/7498784109" target="_blank" class="ai-whatsapp">
+          Chat on WhatsApp
+        </a>
+        <label for="ai-toggle" class="ai-close">×</label>
+      </div>
+
+      <style>
+        .ai-chat {
+          position: fixed;
+          bottom: 30px;
+          right: 30px;
+          z-index: 9999;
+          font-family: system-ui, sans-serif;
+        }
+
+        #ai-toggle {
+          display: none;
+        }
+
+        .ai-button {
+          background: linear-gradient(135deg, #6a5cff, #00d4ff);
+          color: #fff;
+          padding: 14px 22px;
+          border-radius: 50px;
+          cursor: pointer;
+          box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+          font-weight: 600;
+        }
+
+        .ai-popup {
+          position: absolute;
+          bottom: 70px;
+          right: 0;
+          width: 280px;
+          background: #0f1220;
+          border-radius: 18px;
+          box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+          opacity: 0;
+          transform: translateY(20px) scale(0.95);
+          pointer-events: none;
+          transition: 0.4s ease;
+          color: #fff;
+        }
+
+        #ai-toggle:checked ~ .ai-popup {
+          opacity: 1;
+          transform: translateY(0) scale(1);
+          pointer-events: auto;
+        }
+
+        .ai-header {
+          padding: 16px;
+          background: linear-gradient(135deg, #6a5cff, #00d4ff);
+          border-radius: 18px 18px 0 0;
+          font-weight: 700;
+          text-align: center;
+        }
+
+        .ai-body {
+          padding: 16px;
+          font-size: 14px;
+          line-height: 1.5;
+        }
+
+        .ai-whatsapp {
+          display: block;
+          margin: 0 16px 16px;
+          padding: 12px;
+          background: #25d366;
+          color: #fff;
+          text-align: center;
+          border-radius: 12px;
+          text-decoration: none;
+          font-weight: 600;
+        }
+
+        .ai-close {
+          position: absolute;
+          top: 10px;
+          right: 14px;
+          font-size: 22px;
+          cursor: pointer;
+          color: #fff;
+        }
+      </style>
+    </section>
+
+    <section class="journey-ai">
+      <div class="journey-ai-wrap">
+        <div class="journey-ai-text">
+          <h2>Our Journey So Far</h2>
+          <p>
+            NK SkillEdge is built on the belief that skills create real
+            opportunity. Our work focuses on hands-on learning, industry
+            alignment, and practical exposure that prepares students for real
+            careers.
+          </p>
+
+          <div class="ai-stats">
+            <div style="text-align: center" class="ai-stat">
+              <strong>200+</strong>
+              <span>Students Trained</span>
+            </div>
+            <div style="text-align: center" s class="ai-stat">
+              <strong>50+</strong>
+              <span>Students Placed</span>
+            </div>
+            <div style="text-align: center" class="ai-stat">
+              <strong>100%</strong>
+              <span>Youth-Led</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="journey-ai-card">
+          <h3>Web Development</h3>
+          <p>
+            High-performance, scalable, and modern websites built for growth
+          </p>
+          <button>Explore Service</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="CEO" class="leader-ai">
+      <div class="leader-ai-wrap">
+        <div class="leader-ai-img">
+          <img src="./Kartik.png" />
+        </div>
+
+        <div class="leader-ai-info">
+          <h4>Leadership</h4>
+          <h2>Mr. Kartik Mendhe</h2>
+          <span>CEO, NK SkillEdge Pvt. Ltd.</span>
+
+          <p>
+            Driven by innovation and technical excellence, Kartik leads NK
+            SkillEdge with a vision to close the gap between education and
+            employability.
+          </p>
+
+          <button>Connect with CEO</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="Director" class="director-ai">
+      <div class="director-ai-wrap">
+        <div class="director-ai-img">
+          <img src="./Ayush.png" />
+        </div>
+
+        <div id="" class="director-ai-info">
+          <h2>Mr. Ayush Bhendarkar</h2>
+          <span>Director & Co-Founder</span>
+
+          <p>
+            Ayush focuses on strategy, execution, and sustainable growth,
+            ensuring that every initiative delivers real impact.
+          </p>
+
+          <button>Connect with Director</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="Services" class="solutions-neo">
+      <div class="solutions-wrap">
+        <div class="solutions-header">
+          <h2>Complete Digital Solutions<br />Under One Roof</h2>
+          <p>
+            At NK SkillEdge Pvt. Ltd., we go beyond training. We partner with
+            businesses and startups to deliver end-to-end digital solutions
+            through live and upcoming projects, combining transparency,
+            affordability, and professional execution.
+          </p>
+        </div>
+
+        <div class="solutions-card">
+          <div class="card-badge">Our Core Motive</div>
+
+          <p>
+            We deliver complete digital solutions including application
+            development, website development, and social media services — all
+            under one roof. Our approach focuses on quality, clarity, and
+            long-term value, helping businesses grow confidently in today’s
+            digital landscape.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="Programs" class="advanced-services">
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="icon">🌐</div>
+          <h3>Website Development</h3>
+          <p>
+            Professional, responsive, and SEO-optimized websites tailored to
+            your business needs. From landing pages to complex web applications.
+          </p>
+
+          <ul>
+            <li>Custom Design & Development</li>
+            <li>E-commerce Solutions</li>
+            <li>CMS Integration</li>
+            <li>Maintenance & Support</li>
+          </ul>
+
+          <button>Starting from ₹15,000</button>
+        </div>
+
+        <div class="service-card popular">
+          <span class="badge">Most Popular</span>
+
+          <div class="icon">📱</div>
+          <h3>Application Development</h3>
+          <p>
+            Native and cross-platform mobile applications that deliver seamless
+            user experiences and powerful digital products.
+          </p>
+
+          <ul>
+            <li>iOS & Android Apps</li>
+            <li>Cross-Platform Development</li>
+            <li>API Integration</li>
+            <li>App Store Deployment</li>
+          </ul>
+
+          <button>Starting from ₹25,000</button>
+        </div>
+
+        <div class="service-card">
+          <div class="icon">📣</div>
+          <h3>Social Media Services</h3>
+          <p>
+            Boost your online presence with strategic social media marketing,
+            content creation, and brand management.
+          </p>
+
+          <ul>
+            <li>Social Media Strategy</li>
+            <li>Content Creation & Posting</li>
+            <li>Paid Advertising Campaigns</li>
+            <li>Analytics & Reporting</li>
+          </ul>
+
+          <button>Starting from ₹8,000/month</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="ai-dark">
+      <div class="ai-glow blue"></div>
+      <div class="ai-glow green"></div>
+
+      <div class="ai-container">
+        <h1>Powering Intelligent Digital Experiences</h1>
+        <p>
+          We design and build next-generation AI-driven solutions that scale
+          with your business.
+        </p>
+
+        <div class="ai-actions">
+          <a href="#" class="btn btn-primary">Get Started</a>
+          <a
+            href="https://wa.me/7498784109"
+            target="_blank"
+            class="btn btn-secondary"
+          >
+            WhatsApp Us
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="ai-stats">
+      <div class="stat">
+        <h2>15+</h2>
+        <p style="color: black">AI-Driven Active Projects</p>
+      </div>
+      <div class="stat">
+        <h2>30+</h2>
+        <p style="color: black">Trusted Global Clients</p>
+      </div>
+      <div class="stat">
+        <h2>50+</h2>
+        <p style="color: black">Solutions Delivered</p>
+      </div>
+      <div class="stat">
+        <h2>10+</h2>
+        <p style="color: black">Upcoming AI Innovations</p>
+      </div>
+    </section>
+
+    <section class="ai-cta">
+      <h1>Build the Future with AI & Innovation</h1>
+      <p>
+        We blend Artificial Intelligence, modern development, and industry
+        expertise to create scalable digital solutions and future-ready
+        professionals.
+      </p>
+      <a href="#" class="cta-btn">📞 Call Us: +91 7498784109</a>
+    </section>
+
+    <section id="Training" class="ai-training">
+      <h2 class="title">AI-Enhanced Training Programs</h2>
+
+      <div class="training-cards">
+        <div class="card" style="color: rgb(5, 71, 71)">
+          Web Development Training
+          <span style="color: black">AI-assisted modern web stacks</span>
+        </div>
+        <div class="card" style="color: rgb(5, 71, 71)">
+          App Development Training
+          <span style="color: black">Smart Android & iOS apps</span>
+        </div>
+        <div class="card" style="color: rgb(5, 71, 71)">
+          Industrial Training
+          <span style="color: black">Real-world industry exposure</span>
+        </div>
+        <div class="card" style="color: rgb(5, 71, 71)">
+          Career Guidance
+          <span style="color: black">AI-based career roadmap</span>
+        </div>
+        <div class="card" style="color: rgb(5, 71, 71)">
+          Technical Workshops
+          <span style="color: black">Hands-on advanced tools</span>
+        </div>
+        <div class="card" style="color: rgb(5, 71, 71)">
+          Personality Development
+          <span style="color: black">Leadership & communication</span>
+        </div>
+        <div class="card" style="color: rgb(5, 71, 71)">
+          Social Media Marketing
+          <span style="color: black">Data-driven growth strategies</span>
+        </div>
+        <div class="card" style="color: rgb(5, 71, 71)">
+          Certification Programs
+          <span style="color: black">Industry-recognized credentials</span>
+        </div>
+      </div>
+    </section>
+    <section id="Team" class="ai-team">
+      <h2 style="color: rgb(3, 37, 25)" class="title">
+        Our AI-Driven Core Team
+      </h2>
+
+      <div class="team-grid">
+        <div class="member">
+          <img src="./img1.png" />
+          <h3 style="color: rgb(5, 71, 71)">Mr. Madhusudan Madankar</h3>
+          <p>Technical Head Officer</p>
+          <span style="color: black"
+            >AI planning, system architecture & innovation</span
+          >
+        </div>
+
+        <div class="member">
+          <img src="./img2.png" />
+          <h3 style="color: rgb(5, 71, 71)">Mr. Harsh Sagare</h3>
+          <p>Social Media Manager</p>
+          <span style="color: black">Analytics-driven brand growth</span>
+        </div>
+
+        <div class="member">
+          <img src="./img3.png" />
+          <h3 style="color: rgb(5, 71, 71)">Mr. Harshal Mendulkar</h3>
+          <p>Chief Technology Officer</p>
+          <span style="color: black">AI products & scalable systems</span>
+        </div>
+
+        <div class="member">
+          <img src="./img4.png" />
+          <h3 style="color: rgb(5, 71, 71)">Mr. Sandesh Lawhale</h3>
+          <p>Web Developer</p>
+          <span style="color: black">React & performance-focused UI</span>
+        </div>
+
+        <div class="member">
+          <img src="./img5.png" />
+          <h3 style="color: rgb(5, 71, 71)">Mr. Sujal Dhoke</h3>
+          <p>Cyber Security Manager</p>
+          <span style="color: black">AI-powered threat monitoring</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="Schedule" class="contact-section">
+      <div class="contact-container">
+        <div class="contact-info">
+          <h2 style="color: black">Get in Touch</h2>
+          <p style="color: rgb(14, 8, 2)">
+            We’re here to help you choose the right course and answer all your
+            questions.
+          </p>
+
+          <div class="info-box">
+            <i class="icon">📞</i>
+            <div>
+              <h4>Call Us</h4>
+              <span>7498784109 / 9356049629</span>
+            </div>
+          </div>
+
+          <div class="info-box">
+            <i class="icon">✉️</i>
+            <div>
+              <h4>Email Us</h4>
+              <span>hmendhe72@gmail.com</span>
+            </div>
+          </div>
+
+          <div class="info-box">
+            <i class="icon">📍</i>
+            <div>
+              <h4>Visit Us</h4>
+              <span>KN SkillEdge Pvt. Ltd.<br />Head Office</span>
+            </div>
+          </div>
+
+          <a
+            href="https://wa.me/7498784109"
+            target="_blank"
+            class="btn btn-secondary"
+          >
+            chat on whatsapp
+          </a>
+        </div>
+
+        <!-- Right Form Panel -->
+        <div id="Contact" class="contact-form">
+          <form>
+            <div class="input-group">
+              <input type="text" required />
+              <label>Full Name</label>
+            </div>
+
+            <div class="input-group">
+              <input type="email" required />
+              <label>Email Address</label>
+            </div>
+
+            <div class="input-group">
+              <input type="tel" required />
+              <label>Phone Number</label>
+            </div>
+
+            <div class="input-group">
+              <select required>
+                <option value="" disabled selected></option>
+                <option>Web Development</option>
+                <option>Data Science</option>
+                <option>Digital Marketing</option>
+              </select>
+              <label>Course Interested In</label>
+            </div>
+
+            <div class="input-group">
+              <textarea rows="4" required></textarea>
+              <label>Your Message</label>
+            </div>
+
+            <button type="submit">Send Message 🚀</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section class="future">
+      <h1>Ready to Shape Your AI-Powered Future?</h1>
+      <p>
+        Join our community of learners, innovators, and professionals building
+        tomorrow’s technology today.
+      </p>
+      <a href="#" class="future-btn">🚀 Apply for Training</a>
+    </section>
+
+    <section class="ultra-footer">
+      <div class="uf-glow"></div>
+
+      <div class="uf-container">
+        <div class="uf-brand">
+          <h2>NK SkillEdge</h2>
+          <p>
+            Shaping skills. Engineering futures.<br />Industry-driven learning
+            for the next generation.
+          </p>
+
+          <a href="#" class="uf-cta">Schedule a Call</a>
+
+          <div class="uf-social">
+            <a href="#"><span>Fb</span></a>
+            <a href="#"><span>Tw</span></a>
+            <a href="#"><span>In</span></a>
+            <a href="#"><span>Ln</span></a>
+          </div>
+        </div>
+
+        <div class="uf-links">
+          <h4>Quick Access</h4>
+          <a id="Home" href="#">Home</a>
+          <a id="About" href="#">About</a>
+          <a href="#">Leadership</a>
+          <a id="Programs" href="#">Programs</a>
+          <a href="#">Success Stories</a>
+          <a id="Contact" href="#">Contact</a>
+        </div>
+
+        <div class="uf-links">
+          <h4>Programs</h4>
+          <a href="#">Industrial Training</a>
+          <a href="#">Web Development</a>
+          <a href="#">App Development</a>
+          <a href="#">Digital Marketing</a>
+          <a href="#">Career Guidance</a>
+          <a href="#">Certifications</a>
+        </div>
+
+        <div class="uf-contact">
+          <h4>Contact</h4>
+          <p>📞 7498784109 / 9356049629</p>
+          <p>✉️ hmendhe72@gmail.com</p>
+          <p>📍 Near Gobade Hospital, Sakoli</p>
+        </div>
+      </div>
+
+      <div class="uf-bottom">
+        <span>© 2023 NK SkillEdge Pvt. Ltd.</span>
+        <span>Crafted with Precision</span>
+      </div>
+    </section>
+
+    <style>
+      :root {
+        --bg: #060b1a;
+        --card: rgba(255, 255, 255, 0.04);
+        --accent: #ff8c2b;
+        --accent2: #2cff88;
+        --text: #e5e9f0;
+        --muted: #9aa4b2;
+      }
+
+      .ultra-footer {
+        position: relative;
+        background: radial-gradient(circle at top, #0d1633, var(--bg));
+        color: var(--text);
+        overflow: hidden;
+        padding: 90px 0 30px;
+        font-family: system-ui, sans-serif;
+      }
+
+      .uf-glow {
+        position: absolute;
+        inset: -40%;
+        background:
+          radial-gradient(
+            circle at 30% 30%,
+            rgba(255, 140, 43, 0.15),
+            transparent 40%
+          ),
+          radial-gradient(
+            circle at 70% 60%,
+            rgba(44, 255, 136, 0.12),
+            transparent 45%
+          );
+        filter: blur(80px);
+        z-index: 0;
+      }
+
+      .uf-container {
+        position: relative;
+        z-index: 1;
+        max-width: 1200px;
+        margin: auto;
+        padding: 0 24px;
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr 1.2fr;
+        gap: 48px;
+      }
+
+      .uf-brand h2 {
+        font-size: 28px;
+        letter-spacing: 0.5px;
+      }
+
+      .uf-brand p {
+        margin: 16px 0 26px;
+        color: var(--muted);
+        line-height: 1.6;
+      }
+
+      .uf-cta {
+        display: inline-block;
+        padding: 14px 28px;
+        border-radius: 40px;
+        background: linear-gradient(135deg, var(--accent2), var(--accent));
+        color: #000;
+        font-weight: 600;
+        text-decoration: none;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+        transition: transform 0.3s ease;
+      }
+
+      .uf-cta:hover {
+        transform: translateY(-3px) scale(1.03);
+      }
+
+      .uf-social {
+        display: flex;
+        gap: 14px;
+        margin-top: 28px;
+      }
+
+      .uf-social a {
+        width: 42px;
+        height: 42px;
+        border-radius: 50%;
+        background: var(--card);
+        display: grid;
+        place-items: center;
+        color: var(--text);
+        text-decoration: none;
+        backdrop-filter: blur(10px);
+        transition:
+          background 0.3s,
+          transform 0.3s;
+      }
+
+      .uf-social a:hover {
+        background: linear-gradient(135deg, var(--accent), var(--accent2));
+        color: #000;
+        transform: translateY(-4px);
+      }
+
+      .uf-links h4,
+      .uf-contact h4 {
+        margin-bottom: 18px;
+        font-size: 16px;
+        letter-spacing: 0.4px;
+      }
+
+      .uf-links a {
+        display: block;
+        margin: 10px 0;
+        color: var(--muted);
+        text-decoration: none;
+        transition:
+          color 0.3s,
+          transform 0.3s;
+      }
+
+      .uf-links a:hover {
+        color: var(--text);
+        transform: translateX(6px);
+      }
+
+      .uf-contact p {
+        margin: 10px 0;
+        color: var(--muted);
+        line-height: 1.5;
+      }
+
+      .uf-bottom {
+        margin-top: 70px;
+        padding-top: 22px;
+        border-top: 1px solid rgba(255, 255, 255, 0.08);
+        display: flex;
+        justify-content: space-between;
+        max-width: 1200px;
+        padding-left: 24px;
+        padding-right: 24px;
+        margin-left: auto;
+        margin-right: auto;
+        color: var(--muted);
+        font-size: 14px;
+      }
+
+      @media (max-width: 900px) {
+        .uf-container {
+          grid-template-columns: 1fr 1fr;
+        }
+      }
+
+      @media (max-width: 560px) {
+        .uf-container {
+          grid-template-columns: 1fr;
+        }
+        .uf-bottom {
+          flex-direction: column;
+          gap: 10px;
+          text-align: center;
+        }
+      }
+    </style>
+
+    <script src="./index.js"></script>
+  </body>
+</html>
